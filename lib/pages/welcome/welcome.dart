@@ -16,7 +16,7 @@ class _WelcomeState extends State<Welcome> {
       color: Colors.white,
       child: Scaffold(
         body: Container(
-          width: 375.w,
+         // width: 375.w,
         ),
 
       ),
