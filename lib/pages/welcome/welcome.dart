@@ -16,39 +16,50 @@ class _WelcomeState extends State<Welcome> {
       color: Colors.white,
       child: Scaffold(
         body: Container(
-         // width: 375.w,
-         child: Stack(
-          children: [
-            PageView(
-              children: [
-                Column(
-
-                  children: [
-                    SizedBox(
-                      height: 360,
-                      width: 360,
-                      child: Text('image onw'),
-                    ),
-
-                    Container(
-                      child: Text('First see learnign',style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 24,
-                        fontWeight: FontWeight.normal
-                      ),),
-                    )
-
-                  ],
-
-                )
-                
-
-              ],
-            )
-          ],
-         ),
+          // width: 375.w,
+          child: Stack(
+            children: [
+              PageView(
+                children: [
+                  Column(
+                    children: [
+                      SizedBox(
+                        height: 360,
+                        width: 360,
+                        child: Text('image one'),
+                      ),
+                      Container(
+                        child: Text(
+                          'First see learning',
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 24,
+                              fontWeight: FontWeight.normal),
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.all(12),
+                        child: Text(
+                          'Forget about a for of paper all knowledge in learning',
+                          style: TextStyle(
+                              color: Colors.black.withOpacity(0.5),
+                              fontSize: 14,
+                              fontWeight: FontWeight.normal),
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.all(12),
+                        height: 50,
+                        width: 325,
+                        decoration: BoxDecoration(color: Colors.blue),
+                      )
+                    ],
+                  )
+                ],
+              )
+            ],
+          ),
         ),
-
       ),
     );
   }
