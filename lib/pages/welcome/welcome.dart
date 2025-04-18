@@ -48,10 +48,28 @@ class _WelcomeState extends State<Welcome> {
                         ),
                       ),
                       Container(
-                        padding: EdgeInsets.all(12),
+                        padding: EdgeInsets.all(20),
                         height: 50,
                         width: 325,
-                        decoration: BoxDecoration(color: Colors.blue),
+                        decoration: BoxDecoration(
+                            color: Colors.blue,
+                            borderRadius: BorderRadius.circular(12),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.grey.withOpacity(.5),
+                                  spreadRadius: 1,
+                                  blurRadius: 2,
+                                  offset: Offset(0, 1))
+                            ]),
+                        child: Center(
+                          child: Text(
+                            'Next',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 14,
+                                fontWeight: FontWeight.normal),
+                          ),
+                        ),
                       )
                     ],
                   )
