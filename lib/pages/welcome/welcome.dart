@@ -17,6 +17,36 @@ class _WelcomeState extends State<Welcome> {
       child: Scaffold(
         body: Container(
          // width: 375.w,
+         child: Stack(
+          children: [
+            PageView(
+              children: [
+                Column(
+
+                  children: [
+                    SizedBox(
+                      height: 360,
+                      width: 360,
+                      child: Text('image onw'),
+                    ),
+
+                    Container(
+                      child: Text('First see learnign',style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 24,
+                        fontWeight: FontWeight.normal
+                      ),),
+                    )
+
+                  ],
+
+                )
+                
+
+              ],
+            )
+          ],
+         ),
         ),
 
       ),
