@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter/cupertino.dart';
 
 class Welcome extends StatefulWidget {
   const Welcome({super.key});
@@ -13,7 +15,10 @@ class _WelcomeState extends State<Welcome> {
     return Container(
       color: Colors.white,
       child: Scaffold(
-        
+        body: Container(
+          width: 375.w,
+        ),
+
       ),
     );
   }
