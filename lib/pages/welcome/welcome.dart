@@ -21,7 +21,10 @@ class _WelcomeState extends State<Welcome> {
               children: [
                 PageView(
                   children: [
-                    _page(context),
+                    _page(context, 2, "Next","First see learning", "Forget about a for of paper all knowledge in learning", "image path"),
+                     _page(context, 2, "Next","First see learning", "Forget about a for of paper all knowledge in learning", "image path"),
+                   _page(context, 2, "Next","First see learning", "Forget about a for of paper all knowledge in learning", "image path"),
+                  
                   ],
                 ),
               ],
@@ -32,7 +35,7 @@ class _WelcomeState extends State<Welcome> {
     );
   }
 
-  Widget _page(BuildContext context) {
+  Widget _page(BuildContext context, int index, String buttonName, String tittle ,String subtittle, String imagePath) {
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
 
