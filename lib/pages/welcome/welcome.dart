@@ -20,7 +20,20 @@ class _WelcomeState extends State<Welcome> {
             children: [
               PageView(
                 children: [
-                  LayoutBuilder(
+                  
+                ],
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget  _page(){
+    return Column(
+      children: [
+        LayoutBuilder(
                     builder: (context, constraints) {
                       // Get the screen width and height
                       final screenWidth = constraints.maxWidth;
@@ -92,12 +105,8 @@ class _WelcomeState extends State<Welcome> {
                       );
                     },
                   )
-                ],
-              )
-            ],
-          ),
-        ),
-      ),
+      ],
+
     );
   }
 }
