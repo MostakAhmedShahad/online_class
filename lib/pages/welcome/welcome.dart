@@ -21,10 +21,27 @@ class _WelcomeState extends State<Welcome> {
               children: [
                 PageView(
                   children: [
-                    _page(context, 2, "Next","First see learning", "Forget about a for of paper all knowledge in learning", "image path"),
-                     _page(context, 2, "Next","First see learning", "Forget about a for of paper all knowledge in learning", "image path"),
-                   _page(context, 2, "Next","First see learning", "Forget about a for of paper all knowledge in learning", "image path"),
-                  
+                    _page(
+                        context,
+                        1,
+                        "Next",
+                        "First see learning",
+                        "Forget about a for of paper all knowledge in learning",
+                        "image path"),
+                    _page(
+                        context,
+                        2,
+                        "Next",
+                        "First see learning",
+                        "Forget about a for of paper all knowledge in learning",
+                        "image path"),
+                    _page(
+                        context,
+                        3,
+                        "Next",
+                        "First see learning",
+                        "Forget about a for of paper all knowledge in learning",
+                        "image path"),
                   ],
                 ),
               ],
@@ -35,7 +52,8 @@ class _WelcomeState extends State<Welcome> {
     );
   }
 
-  Widget _page(BuildContext context, int index, String buttonName, String tittle ,String subtittle, String imagePath) {
+  Widget _page(BuildContext context, int index, String buttonName,
+      String tittle, String subtittle, String imagePath) {
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
 
@@ -59,7 +77,7 @@ class _WelcomeState extends State<Welcome> {
             ),
             SizedBox(height: screenHeight * 0.05),
             Text(
-              'First see learning',
+              tittle,
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.black,
@@ -69,7 +87,7 @@ class _WelcomeState extends State<Welcome> {
             ),
             SizedBox(height: screenHeight * 0.015),
             Text(
-              'Forget about a for of paper all knowledge in learning',
+              subtittle,
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.black.withOpacity(0.5),
@@ -92,12 +110,13 @@ class _WelcomeState extends State<Welcome> {
                   ),
                 ],
               ),
-              child: const Center(
+              child:   Center(
                 child: Text(
-                  'Next',
+                  buttonName,
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 16, // You can use screenWidth * 0.04 for dynamic size
+                    fontSize:
+                        16, // You can use screenWidth * 0.04 for dynamic size
                     fontWeight: FontWeight.w500,
                   ),
                 ),
