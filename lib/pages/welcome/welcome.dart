@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter/cupertino.dart';
 
 class Welcome extends StatefulWidget {
   const Welcome({super.key});
@@ -12,102 +11,99 @@ class Welcome extends StatefulWidget {
 class _WelcomeState extends State<Welcome> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.white,
-      child: Scaffold(
-        body: Container(
-          child: Stack(
-            children: [
-              PageView(
-                children: [
-                  _page(),
-                  
-                ],
-              )
-            ],
+    return ScreenUtilInit(
+      designSize: const Size(360, 690), // You can adjust this base size
+      builder: (context, child) {
+        return Scaffold(
+          backgroundColor: Colors.white,
+          body: SafeArea(
+            child: Stack(
+              children: [
+                PageView(
+                  children: [
+                    _page(context),
+                  ],
+                ),
+              ],
+            ),
           ),
-        ),
-      ),
+        );
+      },
     );
   }
 
-  Widget  _page(){
-    return Column(
-      children: [
-        LayoutBuilder(
-                    builder: (context, constraints) {
-                      // Get the screen width and height
-                      final screenWidth = constraints.maxWidth;
-                      final screenHeight = constraints.maxHeight;
+  Widget _page(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
 
-                      return SingleChildScrollView(
-                        child: Column(
-                          children: [
-                            SizedBox(
-                              height: screenHeight *
-                                  0.4, // e.g., 40% of screen height
-                              width:
-                                  screenWidth * 0.8, // e.g., 80% of screen width
-                              child: Text('image one'),
-                            ),
-                            Container(
-                              child: Text(
-                                'First see learning',
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize:
-                                      screenWidth * 0.06, // responsive font size
-                                  fontWeight: FontWeight.normal,
-                                ),
-                              ),
-                            ),
-                            Container(
-                              padding: EdgeInsets.all(screenWidth * 0.03),
-                              child: Text(
-                                'Forget about a for of paper all knowledge in learning',
-                                style: TextStyle(
-                                  color: Colors.black.withOpacity(0.5),
-                                  fontSize:
-                                      screenWidth * 0.035, // responsive font size
-                                  fontWeight: FontWeight.normal,
-                                ),
-                              ),
-                            ),
-                            SizedBox(height: 80,),
-                            Container(
-                             // padding: EdgeInsets.all(screenWidth * 0.05),
-                              height: screenHeight * 0.08,
-                              width: screenWidth * 0.85,
-                              decoration: BoxDecoration(
-                                color: Colors.blue,
-                                borderRadius: BorderRadius.circular(12),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.grey.withOpacity(.5),
-                                    spreadRadius: 1,
-                                    blurRadius: 2,
-                                    offset: Offset(0, 1),
-                                  )
-                                ],
-                              ),
-                              child: Center(
-                                child: Text(
-                                  'Next',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: screenWidth * 0.04, // responsive
-                                    fontWeight: FontWeight.normal,
-                                  ),
-                                ),
-                              ),
-                            )
-                          ],
-                        ),
-                      );
-                    },
-                  )
-      ],
-
+    return SingleChildScrollView(
+      child: Container(
+        padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.07),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            SizedBox(height: screenHeight * 0.1),
+            Container(
+              height: screenHeight * 0.35,
+              width: screenWidth * 0.8,
+              color: Colors.grey.shade200,
+              child: const Center(
+                child: Text(
+                  'Image One',
+                  style: TextStyle(color: Colors.black54),
+                ),
+              ),
+            ),
+            SizedBox(height: screenHeight * 0.05),
+            Text(
+              'First see learning',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: screenWidth * 0.06,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+            SizedBox(height: screenHeight * 0.015),
+            Text(
+              'Forget about a for of paper all knowledge in learning',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.black.withOpacity(0.5),
+                fontSize: screenWidth * 0.04,
+              ),
+            ),
+            SizedBox(height: screenHeight * 0.1), // Push button down
+            Container(
+              height: screenHeight * 0.07,
+              width: screenWidth * 0.8,
+              decoration: BoxDecoration(
+                color: Colors.blue,
+                borderRadius: BorderRadius.circular(12),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.5),
+                    spreadRadius: 1,
+                    blurRadius: 2,
+                    offset: const Offset(0, 1),
+                  ),
+                ],
+              ),
+              child: const Center(
+                child: Text(
+                  'Next',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16, // You can use screenWidth * 0.04 for dynamic size
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(height: screenHeight * 0.05),
+          ],
+        ),
+      ),
     );
   }
 }
