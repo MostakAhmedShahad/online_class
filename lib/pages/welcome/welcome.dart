@@ -38,7 +38,7 @@ class _WelcomeState extends State<Welcome> {
                     _page(
                         context,
                         3,
-                        "Next",
+                        "Get Started",
                         "First see learning",
                         "Forget about a for of paper all knowledge in learning",
                         "image path"),
