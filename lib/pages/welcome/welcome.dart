@@ -20,6 +20,7 @@ class _WelcomeState extends State<Welcome> {
             children: [
               PageView(
                 children: [
+                  _page(),
                   
                 ],
               )
