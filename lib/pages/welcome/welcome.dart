@@ -1,6 +1,9 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:online_class/pages/welcome/bloc/welcome_bloc.dart';
+import 'package:online_class/pages/welcome/bloc/welcome_state.dart';
 
 class Welcome extends StatefulWidget {
   const Welcome({super.key});
@@ -75,7 +78,9 @@ class _WelcomeState extends State<Welcome> {
     final screenHeight = MediaQuery.of(context).size.height;
 
     return SingleChildScrollView(
-      child: Container(
+      child: BlocBuilder<WelcomBloc, WelcomeState>(
+        builder: (context, state) {
+          return Container(
         padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.07),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -142,7 +147,9 @@ class _WelcomeState extends State<Welcome> {
             SizedBox(height: screenHeight * 0.05),
           ],
         ),
-      ),
+      );
+        },
+      )
     );
   }
 }
