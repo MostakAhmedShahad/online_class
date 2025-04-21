@@ -5,6 +5,7 @@ import 'package:online_class/pages/welcome/bloc/welcome_state.dart';
 class WelcomBloc extends Bloc<WelcomeEvent, WelcomeState> {
   WelcomBloc() : super(WelcomeState()) {
     on<WelcomeEvent>((event, emit) {
+      emit(WelcomeState(page: state.page));
       
     });
   }
