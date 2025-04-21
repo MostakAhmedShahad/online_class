@@ -54,7 +54,10 @@ class _WelcomeState extends State<Welcome> {
                   decorator: DotsDecorator(
                     color: Colors.blue,
                     size:   Size.square(8),
-                    activeSize: const Size(10, 8)
+                    activeSize: const Size(10, 8),
+                    activeShape:  RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8)
+                    )
                   ),
                 ))
               ],
