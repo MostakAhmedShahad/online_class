@@ -1,3 +1,4 @@
+import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -18,7 +19,9 @@ class _WelcomeState extends State<Welcome> {
           backgroundColor: Colors.white,
           body: SafeArea(
             child: Stack(
+              alignment: Alignment.topCenter,
               children: [
+
                 PageView(
                   children: [
                     _page(
@@ -44,6 +47,7 @@ class _WelcomeState extends State<Welcome> {
                         "image path"),
                   ],
                 ),
+                Positioned(child: DotsIndicator(dotsCount:3,mainAxisAlignment: MainAxisAlignment.center,))
               ],
             ),
           ),
