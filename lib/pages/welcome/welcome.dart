@@ -52,11 +52,12 @@ class _WelcomeState extends State<Welcome> {
                   dotsCount: 3,
                   mainAxisAlignment: MainAxisAlignment.center,
                   decorator: DotsDecorator(
-                    color: Colors.blue,
-                    size:   Size.square(8),
+                    color: Colors.grey,
+                    activeColor: Colors.blue,
+                    size: const  Size.square(8),
                     activeSize: const Size(10, 8),
                     activeShape:  RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8)
+                      borderRadius: BorderRadius.circular(5)
                     )
                   ),
                 ))
