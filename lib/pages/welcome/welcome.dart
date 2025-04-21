@@ -21,7 +21,6 @@ class _WelcomeState extends State<Welcome> {
             child: Stack(
               alignment: Alignment.topCenter,
               children: [
-
                 PageView(
                   children: [
                     _page(
@@ -47,7 +46,12 @@ class _WelcomeState extends State<Welcome> {
                         "image path"),
                   ],
                 ),
-                Positioned(child: DotsIndicator(dotsCount:3,mainAxisAlignment: MainAxisAlignment.center,))
+                Positioned(
+                  bottom: 100.h,
+                    child: DotsIndicator(
+                  dotsCount: 3,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                ))
               ],
             ),
           ),
@@ -114,7 +118,7 @@ class _WelcomeState extends State<Welcome> {
                   ),
                 ],
               ),
-              child:   Center(
+              child: Center(
                 child: Text(
                   buttonName,
                   style: TextStyle(
