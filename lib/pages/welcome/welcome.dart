@@ -47,7 +47,7 @@ class _WelcomeState extends State<Welcome> {
                   ],
                 ),
                 Positioned(
-                  bottom: 100.h,
+                  bottom: 120.h,
                     child: DotsIndicator(
                   dotsCount: 3,
                   mainAxisAlignment: MainAxisAlignment.center,
