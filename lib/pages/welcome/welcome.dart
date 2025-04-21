@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:online_class/pages/welcome/bloc/welcome_bloc.dart';
+import 'package:online_class/pages/welcome/bloc/welcome_event.dart';
 import 'package:online_class/pages/welcome/bloc/welcome_state.dart';
 
 class Welcome extends StatefulWidget {
@@ -15,72 +16,83 @@ class Welcome extends StatefulWidget {
 class _WelcomeState extends State<Welcome> {
   @override
   Widget build(BuildContext context) {
-    return ScreenUtilInit(
-      designSize: const Size(360, 690), // You can adjust this base size
-      builder: (context, child) {
-        return Scaffold(
-          backgroundColor: Colors.white,
-          body: SafeArea(
-            child: Stack(
-              alignment: Alignment.topCenter,
-              children: [
-                PageView(
+    return BlocBuilder<WelcomeBloc, WelcomeState>(
+      builder: (context, state) {
+        return ScreenUtilInit(
+          designSize: const Size(360, 690),
+          builder: (context, child) {
+            return Scaffold(
+              backgroundColor: Colors.white,
+              body: SafeArea(
+                child: Stack(
+                  alignment: Alignment.topCenter,
                   children: [
-                    _page(
-                        context,
-                        1,
-                        "Next",
-                        "First see learning",
-                        "Forget about a for of paper all knowledge in learning",
-                        "image path"),
-                    _page(
-                        context,
-                        2,
-                        "Next",
-                        "First see learning",
-                        "Forget about a for of paper all knowledge in learning",
-                        "image path"),
-                    _page(
-                        context,
-                        3,
-                        "Get Started",
-                        "First see learning",
-                        "Forget about a for of paper all knowledge in learning",
-                        "image path"),
+                    PageView(
+                      onPageChanged: (index) {
+                        state.page = index;
+                        BlocProvider.of<WelcomeBloc>(context).add(WelcomeEvent());
+                      },
+                      children: [
+                        _page(
+                          context,
+                          1,
+                          "Next",
+                          "First see learning",
+                          "Forget about a for of paper all knowledge in learning",
+                          "image path",
+                        ),
+                        _page(
+                          context,
+                          2,
+                          "Next",
+                          "First see learning",
+                          "Forget about a for of paper all knowledge in learning",
+                          "image path",
+                        ),
+                        _page(
+                          context,
+                          3,
+                          "Get Started",
+                          "First see learning",
+                          "Forget about a for of paper all knowledge in learning",
+                          "image path",
+                        ),
+                      ],
+                    ),
+                    Positioned(
+                      bottom: 80.h,
+                      child: DotsIndicator(
+                        dotsCount: 3,
+                        position: state.page.toDouble(),
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        decorator: DotsDecorator(
+                          color: Colors.grey,
+                          activeColor: Colors.blue,
+                          size: const Size.square(8),
+                          activeSize: const Size(10, 8),
+                          activeShape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                        ),
+                      ),
+                    ),
                   ],
                 ),
-                Positioned(
-                  bottom: 80.h,
-                    child: DotsIndicator(
-                  dotsCount: 3,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  decorator: DotsDecorator(
-                    color: Colors.grey,
-                    activeColor: Colors.blue,
-                    size: const  Size.square(8),
-                    activeSize: const Size(10, 8),
-                    activeShape:  RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(5)
-                    )
-                  ),
-                ))
-              ],
-            ),
-          ),
+              ),
+            );
+          },
         );
       },
     );
   }
 
-  Widget _page(BuildContext context, int index, String buttonName,
-      String tittle, String subtittle, String imagePath) {
+  Widget _page(BuildContext context, int index, String buttonName, String tittle,
+      String subtittle, String imagePath) {
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
 
     return SingleChildScrollView(
-      child: BlocBuilder<WelcomBloc, WelcomeState>(
-        builder: (context, state) {
-          return Container(
+      child: Container(
         padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.07),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -116,7 +128,7 @@ class _WelcomeState extends State<Welcome> {
                 fontSize: screenWidth * 0.04,
               ),
             ),
-            SizedBox(height: screenHeight * 0.1), // Push button down
+            SizedBox(height: screenHeight * 0.1),
             Container(
               height: screenHeight * 0.07,
               width: screenWidth * 0.8,
@@ -137,8 +149,7 @@ class _WelcomeState extends State<Welcome> {
                   buttonName,
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize:
-                        16, // You can use screenWidth * 0.04 for dynamic size
+                    fontSize: 16,
                     fontWeight: FontWeight.w500,
                   ),
                 ),
@@ -147,9 +158,7 @@ class _WelcomeState extends State<Welcome> {
             SizedBox(height: screenHeight * 0.05),
           ],
         ),
-      );
-        },
-      )
+      ),
     );
   }
 }
