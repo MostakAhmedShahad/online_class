@@ -52,7 +52,8 @@ class _WelcomeState extends State<Welcome> {
                   dotsCount: 3,
                   mainAxisAlignment: MainAxisAlignment.center,
                   decorator: DotsDecorator(
-                    color: Colors.blue
+                    color: Colors.blue,
+                    size:   Size.square(8),
                   ),
                 ))
               ],
