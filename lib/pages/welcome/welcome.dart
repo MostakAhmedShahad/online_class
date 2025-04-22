@@ -101,7 +101,7 @@ class _WelcomeState extends State<Welcome> {
             Container(
               height: screenHeight * 0.35,
               width: screenWidth * 0.8,
-              color: Colors.grey.shade200,
+              //color: Colors.grey.shade200,
               child:   Center(
                 child: Image.asset(imagePath),
               ),
