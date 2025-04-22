@@ -135,7 +135,9 @@ class _WelcomeState extends State<Welcome> {
                   pageController.animateToPage(index,
                       duration: const Duration(milliseconds: 800),
                       curve: Curves.easeIn);
-                } else {}
+                } else {
+                  Navigator.of(context).pushNamedAndRemoveUntil("myHomePage", (route)=> false);
+                }
               },
               child: Container(
                 height: screenHeight * 0.07,

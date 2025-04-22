@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:online_class/pages/my_home_page/my_home_page.dart';
 import 'package:online_class/pages/welcome/bloc/welcome_bloc.dart';
 import 'package:online_class/pages/welcome/welcome.dart';
 
@@ -21,6 +22,9 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
         ),
         home: const Welcome(),
+        routes: {
+          "myHomePage":(context)=> const MyHomePage(),
+        },
       ),
     );
   }
