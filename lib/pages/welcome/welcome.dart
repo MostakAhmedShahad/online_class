@@ -14,7 +14,7 @@ class Welcome extends StatefulWidget {
 }
 
 class _WelcomeState extends State<Welcome> {
-  PageController pageController=PageController(initialPage: 0);
+  PageController pageController = PageController(initialPage: 0);
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<WelcomeBloc, WelcomeState>(
@@ -32,7 +32,8 @@ class _WelcomeState extends State<Welcome> {
                       controller: pageController,
                       onPageChanged: (index) {
                         state.page = index;
-                        BlocProvider.of<WelcomeBloc>(context).add(WelcomeEvent());
+                        BlocProvider.of<WelcomeBloc>(context)
+                            .add(WelcomeEvent());
                       },
                       children: [
                         _page(
@@ -88,8 +89,8 @@ class _WelcomeState extends State<Welcome> {
     );
   }
 
-  Widget _page(BuildContext context, int index, String buttonName, String tittle,
-      String subtittle, String imagePath) {
+  Widget _page(BuildContext context, int index, String buttonName,
+      String tittle, String subtittle, String imagePath) {
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
 
@@ -104,7 +105,7 @@ class _WelcomeState extends State<Welcome> {
               height: screenHeight * 0.35,
               width: screenWidth * 0.8,
               //color: Colors.grey.shade200,
-              child:   Center(
+              child: Center(
                 child: Image.asset(imagePath),
               ),
             ),
@@ -128,33 +129,29 @@ class _WelcomeState extends State<Welcome> {
               ),
             ),
             SizedBox(height: screenHeight * 0.1),
-            Container(
-              height: screenHeight * 0.07,
-              width: screenWidth * 0.8,
-              decoration: BoxDecoration(
-                color: Colors.blue,
-                borderRadius: BorderRadius.circular(12),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.5),
-                    spreadRadius: 1,
-                    blurRadius: 2,
-                    offset: const Offset(0, 1),
-                  ),
-                ],
-              ),
-              child: GestureDetector(
-                onTap: () {
-                  if(index<3){
-                    pageController.animateToPage(index,
-                     duration: const Duration(microseconds: 1000),
+            GestureDetector(
+              onTap: () {
+                if (index < 3) {
+                  pageController.animateToPage(index,
+                      duration: const Duration(milliseconds: 800),
                       curve: Curves.easeIn);
-
-                  }
-                  else{
-
-                  }
-                },
+                } else {}
+              },
+              child: Container(
+                height: screenHeight * 0.07,
+                width: screenWidth * 0.8,
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                  borderRadius: BorderRadius.circular(12),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.5),
+                      spreadRadius: 1,
+                      blurRadius: 2,
+                      offset: const Offset(0, 1),
+                    ),
+                  ],
+                ),
                 child: Center(
                   child: Text(
                     buttonName,
