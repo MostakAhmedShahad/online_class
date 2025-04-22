@@ -14,6 +14,7 @@ class Welcome extends StatefulWidget {
 }
 
 class _WelcomeState extends State<Welcome> {
+  PageController pageController=PageController(initialPage: 0);
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<WelcomeBloc, WelcomeState>(
@@ -147,7 +148,7 @@ class _WelcomeState extends State<Welcome> {
 
                   }
                   else{
-                    
+
                   }
                 },
                 child: Center(
