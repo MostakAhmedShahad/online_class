@@ -141,13 +141,23 @@ class _WelcomeState extends State<Welcome> {
                   ),
                 ],
               ),
-              child: Center(
-                child: Text(
-                  buttonName,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500,
+              child: GestureDetector(
+                onTap: () {
+                  if(index<0){
+
+                  }
+                  else{
+                    
+                  }
+                },
+                child: Center(
+                  child: Text(
+                    buttonName,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
                 ),
               ),
