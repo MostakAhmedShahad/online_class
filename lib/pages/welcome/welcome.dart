@@ -39,7 +39,7 @@ class _WelcomeState extends State<Welcome> {
                           "Next",
                           "First see learning",
                           "Forget about a for of paper all knowledge in learning",
-                          "image path",
+                          "assets/images/reading.png",
                         ),
                         _page(
                           context,
@@ -47,7 +47,7 @@ class _WelcomeState extends State<Welcome> {
                           "Next",
                           "First see learning",
                           "Forget about a for of paper all knowledge in learning",
-                          "image path",
+                          "assets/images/boy.png",
                         ),
                         _page(
                           context,
@@ -55,7 +55,7 @@ class _WelcomeState extends State<Welcome> {
                           "Get Started",
                           "First see learning",
                           "Forget about a for of paper all knowledge in learning",
-                          "image path",
+                          "assets/images/man.png",
                         ),
                       ],
                     ),
