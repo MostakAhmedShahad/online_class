@@ -29,6 +29,7 @@ class _WelcomeState extends State<Welcome> {
                   alignment: Alignment.topCenter,
                   children: [
                     PageView(
+                      controller: pageController,
                       onPageChanged: (index) {
                         state.page = index;
                         BlocProvider.of<WelcomeBloc>(context).add(WelcomeEvent());
@@ -144,7 +145,10 @@ class _WelcomeState extends State<Welcome> {
               ),
               child: GestureDetector(
                 onTap: () {
-                  if(index<0){
+                  if(index<3){
+                    pageController.animateToPage(index,
+                     duration: const Duration(microseconds: 1000),
+                      curve: Curves.easeIn);
 
                   }
                   else{
