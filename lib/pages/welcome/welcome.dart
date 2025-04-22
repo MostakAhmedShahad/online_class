@@ -102,11 +102,8 @@ class _WelcomeState extends State<Welcome> {
               height: screenHeight * 0.35,
               width: screenWidth * 0.8,
               color: Colors.grey.shade200,
-              child: const Center(
-                child: Text(
-                  'Image One',
-                  style: TextStyle(color: Colors.black54),
-                ),
+              child:   Center(
+                child: Image.asset(imagePath),
               ),
             ),
             SizedBox(height: screenHeight * 0.05),
