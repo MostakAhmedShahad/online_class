@@ -10,9 +10,14 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _score = 0;
+  int _totalAttempts = 0;
   int _targetNumber = Random().nextInt(5);
 
   void _handleGuess(int guess) {
+    setState(() {
+      _totalAttempts++;
+    });
+
     if (guess == _targetNumber) {
       setState(() {
         _score++;
@@ -24,12 +29,17 @@ class _MyHomePageState extends State<MyHomePage> {
     }
   }
 
+  double get _accuracy {
+    if (_totalAttempts == 0) return 0.0;
+    return (_score / _totalAttempts) * 100;
+  }
+
   void _showResultDialog(String message) {
     showDialog(
       context: context,
       builder: (_) => AlertDialog(
         title: Text(message),
-        content: Text("Your score: $_score"),
+        content: Text("Score: $_score\nAttempts: $_totalAttempts\nAccuracy: ${_accuracy.toStringAsFixed(2)}%"),
         actions: [
           TextButton(
             onPressed: () => Navigator.of(context).pop(),
@@ -79,6 +89,14 @@ class _MyHomePageState extends State<MyHomePage> {
               Text(
                 "Score: $_score",
                 style: Theme.of(context).textTheme.headlineSmall,
+              ),
+              Text(
+                "Attempts: $_totalAttempts",
+                style: Theme.of(context).textTheme.titleMedium,
+              ),
+              Text(
+                "Accuracy: ${_accuracy.toStringAsFixed(2)}%",
+                style: Theme.of(context).textTheme.titleMedium,
               ),
             ],
           ),
