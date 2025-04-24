@@ -70,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 style: Theme.of(context).textTheme.titleLarge,
                 textAlign: TextAlign.center,
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 22),
               Text(
                 "Can you guess it?",
                 style: Theme.of(context).textTheme.titleMedium,
