@@ -75,7 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 "Can you guess it?",
                 style: Theme.of(context).textTheme.titleMedium,
               ),
-              const SizedBox(height: 30),
+              const SizedBox(height: 32),
               Wrap(
                 spacing: 12,
                 children: List.generate(5, (index) {
