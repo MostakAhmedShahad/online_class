@@ -10,6 +10,20 @@ class SignIn extends StatefulWidget {
 class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return   Container(
+      color: Colors.white,
+      child: SafeArea(child: Scaffold(
+        backgroundColor: Colors.white,
+        appBar: AppBar(
+          title: Center(
+            child: Text('Log In',style: TextStyle(
+              color: Colors.black,
+              fontSize: 22,
+              fontWeight: FontWeight.normal,
+            ),),
+          ),
+        ),
+      )),
+    );
   }
 }
