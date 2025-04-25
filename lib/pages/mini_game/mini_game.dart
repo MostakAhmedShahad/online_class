@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
+class MiniGame extends StatefulWidget {
+  const MiniGame({super.key});
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<MiniGame> createState() => _MiniGameState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MiniGameState extends State<MiniGame> {
   int _score = 0;
   int _totalAttempts = 0;
   int _targetNumber = Random().nextInt(5);
