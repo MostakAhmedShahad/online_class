@@ -25,29 +25,31 @@ AppBar buildAppBar() {
 
 Widget ThirdPartLogIn(BuildContext context) {
   return Container(
+    margin: EdgeInsets.all(40),
     child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-         GestureDetector(
-            onTap: () {},
-            child: SizedBox(
-              height: 40,
-              width: 40,
-              child: Image.asset("assets/icons/google.png"),
-            )),
-             _reUsableIcons("apple")
-         
+        _reUsableIcons("google"),
+        _reUsableIcons("apple"),
+        _reUsableIcons("facebook"),
       ],
     ),
   );
 }
 
-Widget _reUsableIcons(String iconName){
+Widget _reUsableIcons(String iconName) {
   return GestureDetector(
-            onTap: () {},
-            child: SizedBox(
-              height: 40,
-              width: 40,
-              child: Image.asset("assets/icons/$iconName.png"),
-            ));
+      onTap: () {},
+      child: SizedBox(
+        height: 40,
+        width: 40,
+        child: Image.asset("assets/icons/$iconName.png"),
+      ));
+}
 
+Widget ReusableText(){
+
+  return Container(
+
+  );
 }
