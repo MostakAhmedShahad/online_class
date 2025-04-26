@@ -34,18 +34,20 @@ Widget ThirdPartLogIn(BuildContext context) {
               width: 40,
               child: Image.asset("assets/icons/google.png"),
             )),
-        GestureDetector(
-            onTap: () {},
-            child: SizedBox(
-              height: 40,
-              width: 40,
-              child: Image.asset("assets/icons/apple.png"),
-            )),
+             _reUsableIcons("apple")
+         
       ],
     ),
   );
 }
 
-Widget ReUsableIcons(String iconName){
-  
+Widget _reUsableIcons(String iconName){
+  return GestureDetector(
+            onTap: () {},
+            child: SizedBox(
+              height: 40,
+              width: 40,
+              child: Image.asset("assets/icons/$iconName.png"),
+            ));
+
 }
