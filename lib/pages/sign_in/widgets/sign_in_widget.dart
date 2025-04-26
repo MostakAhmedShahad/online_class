@@ -21,6 +21,20 @@ AppBar buildAppBar(){
 
 Widget ThirdPartLogIn(BuildContext context){
   return Container(
+    child: Row(
+      children: [
+        GestureDetector(
+          onTap: () {
+            
+          },
+          child: Image.asset("assets/icons/google.png"),
+
+        ),
+         
+
+      ],
+    ),
+
 
   );
 }
