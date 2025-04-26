@@ -18,3 +18,9 @@ AppBar buildAppBar(){
           ),
         );
 }
+
+Widget ThirdPartLogIn(BuildContext context){
+  return Container(
+
+  );
+}
