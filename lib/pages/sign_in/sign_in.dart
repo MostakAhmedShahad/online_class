@@ -20,6 +20,7 @@ class _SignInState extends State<SignIn> {
           child: Column(
             children: [
               ThirdPartLogIn(context),
+              ReusableText("Or use your email to login!"),
             ],
           ),
         ),
