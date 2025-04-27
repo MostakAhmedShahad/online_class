@@ -64,7 +64,7 @@ Widget ReusableText(String text){
 Widget buildTextField (String text, String textType ){
   return Container(
     height:50 ,
-    width: 325,
+    width: 420,
      child: Row(
       children: [
         Container(
@@ -72,6 +72,22 @@ Widget buildTextField (String text, String textType ){
           height: 16,
           margin: EdgeInsets.only(left: 17),
           child: Image.asset("assets/icons/user.png"),
+        ),
+        SizedBox(
+          height:50 ,
+          width: 370,
+          child: TextField(
+            keyboardType: TextInputType.multiline,
+            decoration: const InputDecoration(
+              hintText: "Input your email..",
+              border: OutlineInputBorder(
+                borderSide: BorderSide(
+                  color: Colors.transparent
+                )
+              )
+            ),
+          ),
+          
         )
       ],
      ),
