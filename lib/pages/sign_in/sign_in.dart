@@ -26,10 +26,12 @@ class _SignInState extends State<SignIn> {
                 margin: EdgeInsets.only(top: 66),
                 padding: EdgeInsets.only(left: 25),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   
                   children: [
 
                      ReusableText("Email"),
+                     buildTextField("emain","emaail")
 
                   ],
                 ),

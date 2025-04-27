@@ -63,6 +63,16 @@ Widget ReusableText(String text){
 
 Widget buildTextField (String text, String textType ){
   return Container(
+    height:50 ,
+    width: 325,
+     child: Row(
+      children: [
+        Container(
+          width: 16,
+          height: 16,
+        )
+      ],
+     ),
 
   );
 
