@@ -60,3 +60,10 @@ Widget ReusableText(String text){
 
   );
 }
+
+Widget buildTextField (String text, String textType ){
+  return Container(
+
+  );
+
+}
