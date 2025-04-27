@@ -70,6 +70,8 @@ Widget buildTextField (String text, String textType ){
         Container(
           width: 16,
           height: 16,
+          margin: EdgeInsets.only(left: 17),
+          child: Image.asset("assets/icons/user.png"),
         )
       ],
      ),
