@@ -66,7 +66,7 @@ Widget buildTextField (String text, String textType ){
     height:50 ,
     width: 420,
     decoration: BoxDecoration(
-      borderRadius: BorderRadius.all(Radius.circular(15))
+      borderRadius: BorderRadius.all(Radius.circular(16))
     ),
      child: Row(
       children: [
