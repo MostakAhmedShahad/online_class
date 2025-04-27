@@ -18,9 +18,10 @@ class _SignInState extends State<SignIn> {
         appBar: buildAppBar(),
         body: SingleChildScrollView(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               ThirdPartLogIn(context),
-              ReusableText("Or use your email to login!"),
+              Center(child: ReusableText("Or use your email to login!")),
               Container(
                 margin: EdgeInsets.only(top: 66),
                 child: Column(
