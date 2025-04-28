@@ -61,7 +61,7 @@ Widget ReusableText(String text) {
   );
 }
 
-Widget buildTextField(String hintText, String textType ,String iconName) {
+Widget buildTextField(String hintText, String textType, String iconName) {
   return Container(
     height: 50,
     width: 420,
@@ -100,41 +100,37 @@ Widget buildTextField(String hintText, String textType ,String iconName) {
                     ),
                   ),
                   hintStyle: TextStyle(color: Colors.grey.withOpacity(.5))),
-
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontFamily: "Avenir",
-                    fontWeight: FontWeight.normal,
-                    fontSize: 14,
-
-                  ),
-                  autocorrect: false,
-                  obscureText: textType=="password"?true:false,
+              style: TextStyle(
+                color: Colors.black,
+                fontFamily: "Avenir",
+                fontWeight: FontWeight.normal,
+                fontSize: 14,
+              ),
+              autocorrect: false,
+              obscureText: textType == "password" ? true : false,
             ))
       ],
     ),
   );
 }
 
-
-Widget forgetPassword(){
-
+Widget forgetPassword() {
   return Container(
-
     height: 44,
     width: 260,
     margin: EdgeInsets.only(left: 18),
-    
-
     child: GestureDetector(
-      onTap: () {
-        
-      },
-      child: Text("Forget password?",
-      style: TextStyle(
-        color: Colors.black,
-        decoration: TextDecoration.underline
-      ),),
+      onTap: () {},
+
+      child: Text(
+        "Forget password?",
+        style: TextStyle(
+            color: Colors.black, decoration: TextDecoration.underline,
+            decorationColor: Colors.blue,
+            fontSize: 15,
+            ),
+            
+      ),
     ),
   );
 }
