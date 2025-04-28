@@ -134,3 +134,12 @@ Widget forgetPassword() {
     ),
   );
 }
+
+
+Widget buildLogInButton(){
+
+  return GestureDetector(
+    
+  );
+}
+
