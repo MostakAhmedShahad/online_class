@@ -25,7 +25,7 @@ AppBar buildAppBar() {
 
 Widget ThirdPartLogIn(BuildContext context) {
   return Container(
-    margin: EdgeInsets.only(left: 150,right: 150,top: 20,bottom: 20),
+    margin: EdgeInsets.only(left: 150, right: 150, top: 20, bottom: 20),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -47,28 +47,27 @@ Widget _reUsableIcons(String iconName) {
       ));
 }
 
-Widget ReusableText(String text){
-
+Widget ReusableText(String text) {
   return Container(
-
     margin: EdgeInsets.only(bottom: 5),
-    child: Text(text, style: TextStyle(
-      color: Colors.grey.withOpacity(.5),
-      fontWeight: FontWeight.normal,
-      fontSize: 14,
-    ),),
-
+    child: Text(
+      text,
+      style: TextStyle(
+        color: Colors.grey.withOpacity(.5),
+        fontWeight: FontWeight.normal,
+        fontSize: 14,
+      ),
+    ),
   );
 }
 
-Widget buildTextField (String text, String textType ){
+Widget buildTextField(String text, String textType) {
   return Container(
-    height:50 ,
+    height: 50,
     width: 420,
-    decoration: BoxDecoration(
-      borderRadius: BorderRadius.all(Radius.circular(16))
-    ),
-     child: Row(
+    decoration:
+        BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(16))),
+    child: Row(
       children: [
         Container(
           width: 16,
@@ -77,30 +76,29 @@ Widget buildTextField (String text, String textType ){
           child: Image.asset("assets/icons/user.png"),
         ),
         SizedBox(
-          height:50 ,
+          height: 50,
           width: 370,
           child: TextField(
             keyboardType: TextInputType.multiline,
             decoration: const InputDecoration(
-              hintText: "Input your email..",
-              border: OutlineInputBorder(
-                borderSide: BorderSide(
-                  color: Colors.transparent
-
-                )
-              ),
-              enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(
+                hintText: "Input your email..",
+                border: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.transparent)),
+                enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
                   color: Colors.transparent,
                 )
-              )
-            ),
+                ),
+                disabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                  color: Colors.transparent,
+                )
+                ),
+
+                ),
           ),
-          
         )
       ],
-     ),
-
+    ),
   );
-
 }
