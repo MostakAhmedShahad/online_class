@@ -86,6 +86,12 @@ Widget buildTextField (String text, String textType ){
               border: OutlineInputBorder(
                 borderSide: BorderSide(
                   color: Colors.transparent
+
+                )
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderSide: BorderSide(
+                  color: Colors.transparent,
                 )
               )
             ),
