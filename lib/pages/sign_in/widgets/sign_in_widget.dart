@@ -115,3 +115,16 @@ Widget buildTextField(String hintText, String textType ,String iconName) {
     ),
   );
 }
+
+
+Widget forgetPassword(){
+
+  return Container(
+
+    height: 260,
+    width: 44,
+    margin: EdgeInsets.only(left: 20),
+
+    child: Text("Forget password?"),
+  );
+}
