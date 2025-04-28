@@ -65,8 +65,9 @@ Widget buildTextField(String text, String textType) {
   return Container(
     height: 50,
     width: 420,
-    decoration:
-        BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(16))),
+    decoration: BoxDecoration(
+        borderRadius: BorderRadius.all(Radius.circular(16)),
+        border: Border.all(color: Colors.black)),
     child: Row(
       children: [
         Container(
@@ -76,33 +77,29 @@ Widget buildTextField(String text, String textType) {
           child: Image.asset("assets/icons/user.png"),
         ),
         SizedBox(
-          height: 50,
-          width: 370,
-          child: TextField(
-            keyboardType: TextInputType.multiline,
-            decoration: const InputDecoration(
-                hintText: "Input your email..",
-                border: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.transparent)),
-                enabledBorder: OutlineInputBorder(
+            height: 50,
+            width: 370,
+            child: TextField(
+              keyboardType: TextInputType.multiline,
+              decoration: InputDecoration(
+                  hintText: "Input your email..",
+                  border: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.transparent)),
+                  enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                    color: Colors.transparent,
+                  )),
+                  disabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                    color: Colors.transparent,
+                  )),
+                  focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                  color: Colors.transparent,
-                )
-                ),
-                disabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                  color: Colors.transparent,
-                )
-                ),
-                focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                  color: Colors.transparent,
-                )
-                ),
-
-                ),
-          ),
-        )
+                      color: Colors.transparent,
+                    ),
+                  ),
+                  hintStyle: TextStyle(color: Colors.grey.withOpacity(.5))),
+            ))
       ],
     ),
   );
