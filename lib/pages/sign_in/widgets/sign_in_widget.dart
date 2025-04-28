@@ -1,20 +1,21 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:online_class/common/values/color.dart';
 
 AppBar buildAppBar() {
   return AppBar(
     bottom: PreferredSize(
         preferredSize: const Size.fromHeight(1),
         child: Container(
-          color: Colors.grey.withOpacity(.5),
+          color: AppColors.primarySecondaryBackground,
           height: 1,
         )),
     title: Center(
       child: Text(
         'Log In',
         style: TextStyle(
-          color: Colors.black,
+          color: AppColors.primaryText,
           fontSize: 22,
           fontWeight: FontWeight.normal,
         ),
@@ -142,7 +143,7 @@ Widget buildLogInButton(String buttonName, String buttonType) {
       width: 420,
       margin: EdgeInsets.only(top: buttonType=="login"?40:20),
       decoration: BoxDecoration(
-          color: Colors.blue,
+          color: AppColors.primaryElement,
           borderRadius: BorderRadius.circular(12),
           boxShadow: [
             BoxShadow(
@@ -155,7 +156,7 @@ Widget buildLogInButton(String buttonName, String buttonType) {
         child: Text(
           buttonName,
           style: TextStyle(
-            color: Colors.white,
+            color:AppColors.primaryBackground,
             fontWeight: FontWeight.normal,
             fontSize: 16,
           ),

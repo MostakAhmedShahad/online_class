@@ -2,6 +2,7 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:online_class/common/values/color.dart';
 import 'package:online_class/pages/welcome/bloc/welcome_bloc.dart';
 import 'package:online_class/pages/welcome/bloc/welcome_event.dart';
 import 'package:online_class/pages/welcome/bloc/welcome_state.dart';
@@ -73,7 +74,7 @@ class _WelcomeState extends State<Welcome> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             decorator: DotsDecorator(
                               color: Colors.grey,
-                              activeColor: Colors.blue,
+                              activeColor: AppColors.primaryElement,
                               size: const Size.square(8),
                               activeSize: const Size(10, 8),
                               activeShape: RoundedRectangleBorder(
@@ -149,7 +150,7 @@ class _WelcomeState extends State<Welcome> {
                     height: screenHeight * 0.07,
                     width: screenWidth * 0.8,
                     decoration: BoxDecoration(
-                      color: Colors.blue,
+                      color: AppColors.primaryElement,
                       borderRadius: BorderRadius.circular(12),
                       boxShadow: [
                         BoxShadow(
