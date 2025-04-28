@@ -121,25 +121,39 @@ Widget forgetPassword() {
     margin: EdgeInsets.only(left: 18),
     child: GestureDetector(
       onTap: () {},
-
       child: Text(
         "Forget password?",
         style: TextStyle(
-            color: Colors.black, decoration: TextDecoration.underline,
-            decorationColor: Colors.blue,
-            fontSize: 15,
-            ),
-            
+          color: Colors.black,
+          decoration: TextDecoration.underline,
+          decorationColor: Colors.blue,
+          fontSize: 15,
+        ),
       ),
     ),
   );
 }
 
-
-Widget buildLogInButton(){
-
+Widget buildLogInButton(String buttonName) {
   return GestureDetector(
-    
+    onTap: () {},
+    child: Container(
+      height: 50,
+      width: 420,
+
+      decoration: BoxDecoration(
+        color:  Colors.blue,
+        borderRadius: BorderRadius.circular(12),
+        boxShadow: [
+          BoxShadow(
+            spreadRadius: 1,
+            blurRadius: 2,
+            offset: Offset(0, 1),
+            color: Colors.grey.withOpacity(.5)
+          )
+        ]
+      ),
+      child: Center(child: Text("Login"),),
+    ),
   );
 }
-
