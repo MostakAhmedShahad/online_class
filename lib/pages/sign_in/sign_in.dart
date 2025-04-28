@@ -37,7 +37,8 @@ class _SignInState extends State<SignIn> {
                      SizedBox(height: 5,),
                      buildTextField("Enter your password","password", "lock"),
                      forgetPassword(),
-                      buildLogInButton("Add Button")
+                      buildLogInButton("Login", "login"),
+                      buildLogInButton("Register", "register"),
 
                   ],
                 ),

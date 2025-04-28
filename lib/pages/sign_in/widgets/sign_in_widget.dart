@@ -134,26 +134,33 @@ Widget forgetPassword() {
   );
 }
 
-Widget buildLogInButton(String buttonName) {
+Widget buildLogInButton(String buttonName, String buttonType) {
   return GestureDetector(
     onTap: () {},
     child: Container(
       height: 50,
       width: 420,
-
+      margin: EdgeInsets.only(top: buttonType=="login"?40:20),
       decoration: BoxDecoration(
-        color:  Colors.blue,
-        borderRadius: BorderRadius.circular(12),
-        boxShadow: [
-          BoxShadow(
-            spreadRadius: 1,
-            blurRadius: 2,
-            offset: Offset(0, 1),
-            color: Colors.grey.withOpacity(.5)
-          )
-        ]
+          color: Colors.blue,
+          borderRadius: BorderRadius.circular(12),
+          boxShadow: [
+            BoxShadow(
+                spreadRadius: 1,
+                blurRadius: 2,
+                offset: Offset(0, 1),
+                color: Colors.grey.withOpacity(.5))
+          ]),
+      child: Center(
+        child: Text(
+          buttonName,
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.normal,
+            fontSize: 16,
+          ),
+        ),
       ),
-      child: Center(child: Text("Login"),),
     ),
   );
 }
