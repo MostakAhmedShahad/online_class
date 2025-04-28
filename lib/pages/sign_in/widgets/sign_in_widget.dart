@@ -94,6 +94,11 @@ Widget buildTextField(String text, String textType) {
                   color: Colors.transparent,
                 )
                 ),
+                focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                  color: Colors.transparent,
+                )
+                ),
 
                 ),
           ),
