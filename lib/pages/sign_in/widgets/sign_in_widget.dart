@@ -108,6 +108,8 @@ Widget buildTextField(String hintText, String textType ,String iconName) {
                     fontSize: 14,
 
                   ),
+                  autocorrect: false,
+                  obscureText: textType=="password"?true:false,
             ))
       ],
     ),
