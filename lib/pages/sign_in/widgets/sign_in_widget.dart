@@ -121,10 +121,20 @@ Widget forgetPassword(){
 
   return Container(
 
-    height: 260,
-    width: 44,
-    margin: EdgeInsets.only(left: 20),
+    height: 44,
+    width: 260,
+    margin: EdgeInsets.only(left: 18),
+    
 
-    child: Text("Forget password?"),
+    child: GestureDetector(
+      onTap: () {
+        
+      },
+      child: Text("Forget password?",
+      style: TextStyle(
+        color: Colors.black,
+        decoration: TextDecoration.underline
+      ),),
+    ),
   );
 }
