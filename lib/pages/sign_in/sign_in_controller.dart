@@ -16,7 +16,14 @@ class SignInController {
 
         }
         if(password.isEmpty){
+
+        }
+        try{
           
+        }
+
+        catch(e){
+
         }
       }
     }
