@@ -22,6 +22,13 @@ class SignInController {
 
                   }
                   if(!credential.user!.emailVerified){
+
+                  }
+                  var user =credential.user;
+                  if(user!=null){
+
+                  }
+                  else{
                     
                   }
         }

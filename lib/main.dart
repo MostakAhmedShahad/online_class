@@ -4,8 +4,13 @@ import 'package:online_class/pages/my_home_page/my_home_page.dart';
 import 'package:online_class/pages/sign_in/sign_in.dart';
 import 'package:online_class/pages/welcome/bloc/welcome_bloc.dart';
 import 'package:online_class/pages/welcome/welcome.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+Future <void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+   // options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
