@@ -5,6 +5,9 @@ import 'package:online_class/pages/sign_in/sign_in.dart';
 import 'package:online_class/pages/welcome/bloc/welcome_bloc.dart';
 import 'package:online_class/pages/welcome/welcome.dart';
 import 'package:firebase_core/firebase_core.dart';
+ 
+
+
 
 Future <void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
