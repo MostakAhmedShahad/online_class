@@ -25,7 +25,7 @@ class _MiniGameState extends State<MiniGame> {
       });
       _showResultDialog("🎉 Correct!", true);
     } else {
-      _showResultDialog("😅 Wrong! Try again", false);
+      _showResultDialog("😅 Wrong! Try again!", false);
     }
   }
 
