@@ -23,9 +23,9 @@ class _MiniGameState extends State<MiniGame> {
         _score++;
         _targetNumber = Random().nextInt(5);
       });
-      _showResultDialog("Correct! 🎉");
+      _showResultDialog("🎉 Correct!", true);
     } else {
-      _showResultDialog("Wrong! Try again 😅");
+      _showResultDialog("😅 Wrong! Try again", false);
     }
   }
 
@@ -34,12 +34,21 @@ class _MiniGameState extends State<MiniGame> {
     return (_score / _totalAttempts) * 100;
   }
 
-  void _showResultDialog(String message) {
+  void _showResultDialog(String message, bool isSuccess) {
     showDialog(
       context: context,
       builder: (_) => AlertDialog(
-        title: Text(message),
-        content: Text("Score: $_score\nAttempts: $_totalAttempts\nAccuracy: ${_accuracy.toStringAsFixed(2)}%"),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        title: Text(message, textAlign: TextAlign.center),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text("Score: $_score"),
+            Text("Attempts: $_totalAttempts"),
+            Text("Accuracy: ${_accuracy.toStringAsFixed(2)}%"),
+          ],
+        ),
+        backgroundColor: isSuccess ? Colors.green.shade100 : Colors.red.shade100,
         actions: [
           TextButton(
             onPressed: () => Navigator.of(context).pop(),
@@ -53,52 +62,59 @@ class _MiniGameState extends State<MiniGame> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(
-        title: const Text("Guess the Number!"),
-        centerTitle: true,
-        backgroundColor: Colors.blue,
-      ),
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                "I'm thinking of a number between 0 and 4.",
-                style: Theme.of(context).textTheme.titleLarge,
-                textAlign: TextAlign.center,
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            colors: [Colors.blueAccent, Colors.deepPurpleAccent],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
+        ),
+        child: Center(
+          child: Card(
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+            elevation: 15,
+            margin: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+            child: Padding(
+              padding: const EdgeInsets.all(24.0),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Text(
+                    "🎯 Guess the Number!",
+                    style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
+                  ),
+                  const SizedBox(height: 20),
+                  const Text(
+                    "I'm thinking of a number between 0 and 4.\nCan you guess it?",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 18),
+                  ),
+                  const SizedBox(height: 24),
+                  Wrap(
+                    spacing: 12,
+                    runSpacing: 12,
+                    children: List.generate(5, (index) {
+                      return ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.deepPurple,
+                          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                          textStyle: const TextStyle(fontSize: 18),
+                        ),
+                        onPressed: () => _handleGuess(index),
+                        child: Text("$index"),
+                      );
+                    }),
+                  ),
+                  const SizedBox(height: 30),
+                  const Divider(),
+                  Text("Score: $_score", style: Theme.of(context).textTheme.titleMedium),
+                  Text("Attempts: $_totalAttempts", style: Theme.of(context).textTheme.titleMedium),
+                  Text("Accuracy: ${_accuracy.toStringAsFixed(2)}%", style: Theme.of(context).textTheme.titleMedium),
+                ],
               ),
-              const SizedBox(height: 22),
-              Text(
-                "Can you guess it?",
-                style: Theme.of(context).textTheme.titleMedium,
-              ),
-              const SizedBox(height: 32),
-              Wrap(
-                spacing: 12,
-                children: List.generate(5, (index) {
-                  return ElevatedButton(
-                    onPressed: () => _handleGuess(index),
-                    child: Text("$index"),
-                  );
-                }),
-              ),
-              const SizedBox(height: 50),
-              Text(
-                "Score: $_score",
-                style: Theme.of(context).textTheme.headlineSmall,
-              ),
-              Text(
-                "Attempts: $_totalAttempts",
-                style: Theme.of(context).textTheme.titleMedium,
-              ),
-              Text(
-                "Accuracy: ${_accuracy.toStringAsFixed(2)}%",
-                style: Theme.of(context).textTheme.titleMedium,
-              ),
-            ],
+            ),
           ),
         ),
       ),
