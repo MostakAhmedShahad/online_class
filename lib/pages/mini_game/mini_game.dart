@@ -111,7 +111,7 @@ class _MiniGameState extends State<MiniGame> {
                   const Text("🔢 Guess the Number!", style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold)),
                   const SizedBox(height: 20),
                   const Text(
-                    "I'm thinking of a number between 0 and 4.\nCan you guess it?",
+                    "I'm thinking of a number between 0 & 4.\nCan you guess it?",
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 18),
                   ),
