@@ -104,7 +104,7 @@ class _MiniGameState extends State<MiniGame> {
             elevation: 20,
             margin: const EdgeInsets.all(24),
             child: Padding(
-              padding: const EdgeInsets.all(24.0),
+              padding: const EdgeInsets.all(22.0),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
