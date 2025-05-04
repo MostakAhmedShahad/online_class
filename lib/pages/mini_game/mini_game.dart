@@ -43,7 +43,7 @@ class _MiniGameState extends State<MiniGame> {
     showDialog(
       context: context,
       builder: (_) => AlertDialog(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
         title: Center(
           child: AnimatedTextKit(
             repeatForever: false,
