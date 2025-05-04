@@ -65,7 +65,7 @@ class _MiniGameState extends State<MiniGame> {
         actions: [
           TextButton(
             onPressed: () => Navigator.of(context).pop(),
-            child: const Text("Play Again!!!"),
+            child: const Text("Play More!!!"),
           )
         ],
       ),
