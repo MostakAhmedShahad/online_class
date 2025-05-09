@@ -117,7 +117,7 @@ class _MiniGameState extends State<MiniGame> {
                   ),
                   const SizedBox(height: 24),
                   Wrap(
-                    spacing: 12,
+                    spacing: 14,
                     runSpacing: 12,
                     children: List.generate(5, (index) => _buildGuessButton(index)),
                   ),
