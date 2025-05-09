@@ -79,7 +79,7 @@ class _MiniGameState extends State<MiniGame> {
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.deepPurple,
           padding: const EdgeInsets.symmetric(horizontal: 19, vertical: 14),
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
         ),
         onPressed: () => _handleGuess(number),
         child: Text("$number", style: const TextStyle(fontSize: 20)),
