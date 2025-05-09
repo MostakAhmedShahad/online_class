@@ -49,7 +49,7 @@ class _MiniGameState extends State<MiniGame> {
             repeatForever: false,
             totalRepeatCount: 1,
             animatedTexts: [
-              ScaleAnimatedText(message, textStyle: const TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
+              ScaleAnimatedText(message, textStyle: const TextStyle(fontSize: 32, fontWeight: FontWeight.bold)),
             ],
           ),
         ),
