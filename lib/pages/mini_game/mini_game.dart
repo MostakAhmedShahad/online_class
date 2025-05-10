@@ -93,7 +93,7 @@ class _MiniGameState extends State<MiniGame> {
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
-            colors: [Colors.blueAccent, Colors.deepPurpleAccent],
+            colors: [Colors.blue, Colors.deepPurpleAccent],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
