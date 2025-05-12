@@ -43,7 +43,7 @@ class _MiniGameState extends State<MiniGame> {
     showDialog(
       context: context,
       builder: (_) => AlertDialog(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(22)),
         title: Center(
           child: AnimatedTextKit(
             repeatForever: false,
@@ -65,7 +65,7 @@ class _MiniGameState extends State<MiniGame> {
         actions: [
           TextButton(
             onPressed: () => Navigator.of(context).pop(),
-            child: const Text("Play More!!!"),
+            child: const Text("Play More!"),
           )
         ],
       ),
