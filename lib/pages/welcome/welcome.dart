@@ -125,7 +125,7 @@ class _WelcomeState extends State<Welcome> {
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-                SizedBox(height: screenHeight * 0.015),
+                SizedBox(height: screenHeight * 0.016),
                 Text(
                   subtittle,
                   textAlign: TextAlign.center,
