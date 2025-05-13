@@ -109,7 +109,7 @@ class _WelcomeState extends State<Welcome> {
               children: [
                 SizedBox(height: screenHeight * 0.1),
                 SizedBox(
-                  height: screenHeight * 0.35,
+                  height: screenHeight * 0.36,
                   width: screenWidth * 0.8,
                   child: Center(
                     child: Image.asset(imagePath, fit: BoxFit.contain),
