@@ -31,7 +31,7 @@ class _SignInState extends State<SignIn> {
                   children: [
 
                      ReusableText("Email"),
-                     SizedBox(height: 5,),
+                     SizedBox(height: 6,),
                      buildTextField("Enter your email address","email", "user"),
                      ReusableText("Password"),
                      SizedBox(height: 5,),
