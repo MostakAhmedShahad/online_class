@@ -130,7 +130,7 @@ class _WelcomeState extends State<Welcome> {
                   subtittle,
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    color: Colors.black.withOpacity(0.5),
+                    color: Colors.black.withOpacity(0.6),
                     fontSize: screenWidth * 0.04,
                   ),
                 ),
