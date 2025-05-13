@@ -150,7 +150,7 @@ Widget buildLogInButton(String buttonName, String buttonType) {
                 spreadRadius: 1,
                 blurRadius: 2,
                 offset: Offset(0, 1),
-                color: Colors.grey.withOpacity(.5))
+                color: Colors.grey.withOpacity(.6))
           ]),
       child: Center(
         child: Text(
