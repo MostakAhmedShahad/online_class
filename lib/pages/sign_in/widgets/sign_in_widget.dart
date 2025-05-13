@@ -119,7 +119,7 @@ Widget forgetPassword() {
   return Container(
     height: 44,
     width: 260,
-    margin: EdgeInsets.only(left: 18),
+    margin: EdgeInsets.only(left: 20),
     child: GestureDetector(
       onTap: () {},
       child: Text(
