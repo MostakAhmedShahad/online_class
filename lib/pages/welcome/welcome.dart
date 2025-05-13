@@ -122,7 +122,7 @@ class _WelcomeState extends State<Welcome> {
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: screenWidth * 0.06,
-                    fontWeight: FontWeight.w600,
+                    fontWeight: FontWeight.w500,
                   ),
                 ),
                 SizedBox(height: screenHeight * 0.016),
