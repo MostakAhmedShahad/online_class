@@ -82,7 +82,7 @@ class _MiniGameState extends State<MiniGame> {
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
         ),
         onPressed: () => _handleGuess(number),
-        child: Text("$number", style: const TextStyle(fontSize: 20)),
+        child: Text("$number", style: const TextStyle(fontSize: 22)),
       ),
     );
   }
