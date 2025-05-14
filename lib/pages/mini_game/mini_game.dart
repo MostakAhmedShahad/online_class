@@ -108,7 +108,7 @@ class _MiniGameState extends State<MiniGame> {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  const Text("🔢 Guess the Number!", style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold)),
+                  const Text("🔢 Guess the Number!", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
                   const SizedBox(height: 20),
                   const Text(
                     "I'm thinking of a number between 0 & 4.\nCan you guess it?",
