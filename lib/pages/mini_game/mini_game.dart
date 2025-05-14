@@ -30,7 +30,7 @@ class _MiniGameState extends State<MiniGame> {
         _score++;
         _targetNumber = Random().nextInt(5);
       });
-      _showResultDialog("🎉 Correct!", true);
+      _showResultDialog("🎉 Correct!!!!", true);
     } else {
       _playSound(false);
       _showResultDialog("❌ Wrong!", false);
