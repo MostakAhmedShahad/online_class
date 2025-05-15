@@ -100,7 +100,7 @@ class _MiniGameState extends State<MiniGame> {
         ),
         child: Center(
           child: Card(
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(22)),
             elevation: 20,
             margin: const EdgeInsets.all(24),
             child: Padding(
@@ -112,10 +112,10 @@ class _MiniGameState extends State<MiniGame> {
                   const SizedBox(height: 20),
                   const Text(
                     "I'm thinking of a number between 0 & 4.\nCan you guess it?",
-                    SizedBox(: TextAlign.center,
-                    style: TextStyle(fontSize: 20),
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 18),
                   ),
-                  const SizedBox(height: 26),
+                  const SizedBox(height: 2),
                   Wrap(
                     spacing: 14,
                     runSpacing: 12,
