@@ -115,7 +115,7 @@ class _MiniGameState extends State<MiniGame> {
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 18),
                   ),
-                  const SizedBox(height: 24),
+                  const SizedBox(height: 26),
                   Wrap(
                     spacing: 14,
                     runSpacing: 12,
