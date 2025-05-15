@@ -112,8 +112,8 @@ class _MiniGameState extends State<MiniGame> {
                   const SizedBox(height: 20),
                   const Text(
                     "I'm thinking of a number between 0 & 4.\nCan you guess it?",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 18),
+                    SizedBox(: TextAlign.center,
+                    style: TextStyle(fontSize: 20),
                   ),
                   const SizedBox(height: 26),
                   Wrap(
