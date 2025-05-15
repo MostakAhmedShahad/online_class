@@ -100,7 +100,7 @@ class _MiniGameState extends State<MiniGame> {
         ),
         child: Center(
           child: Card(
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(22)),
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
             elevation: 20,
             margin: const EdgeInsets.all(24),
             child: Padding(
