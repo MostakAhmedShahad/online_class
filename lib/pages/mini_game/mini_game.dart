@@ -64,8 +64,8 @@ class _MiniGameState extends State<MiniGame> {
         backgroundColor: isSuccess ? Colors.green.shade200 : Colors.red.shade200,
         actions: [
           TextButton(
-            backgroundColor: () => Navigator.of(context).pop(),
-            child: const Text("Play More!!!"),
+            onPressed: () => Navigator.of(context).pop(),
+            child: const Text("Play Again!!!"),
           )
         ],
       ),
@@ -78,7 +78,7 @@ class _MiniGameState extends State<MiniGame> {
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.deepPurple,
-          padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 14),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
         ),
         onPressed: () => _handleGuess(number),
