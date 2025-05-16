@@ -61,7 +61,7 @@ class _MiniGameState extends State<MiniGame> {
             Text("Accuracy: ${_accuracy.toStringAsFixed(2)}%"),
           ],
         ),
-        backgroundColor: isSuccess ? Colors.green.shade200 : Colors.red.shade300,
+        backgroundColor: isSuccess ? Colors.green.shade200 : Colors.red.shade200,
         actions: [
           TextButton(
             onPressed: () => Navigator.of(context).pop(),
