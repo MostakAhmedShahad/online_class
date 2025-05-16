@@ -102,7 +102,7 @@ class _MiniGameState extends State<MiniGame> {
           child: Card(
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(22)),
             elevation: 20,
-            margin: const EdgeInsets.all(24),
+            margin: const EdgeInsets.all(22),
             child: Padding(
               padding: const EdgeInsets.all(22.0),
               child: Column(
