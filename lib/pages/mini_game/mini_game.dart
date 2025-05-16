@@ -64,8 +64,8 @@ class _MiniGameState extends State<MiniGame> {
         backgroundColor: isSuccess ? Colors.green.shade200 : Colors.red.shade200,
         actions: [
           TextButton(
-            onPressed: () => Navigator.of(context).pop(),
-            child: const Text("Play More!!!"),
+            backgroundColor: () => Navigator.of(context).pop(),
+            child: const Text("Play Again!!!"),
           )
         ],
       ),
