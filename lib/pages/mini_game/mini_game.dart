@@ -33,7 +33,7 @@ class _MiniGameState extends State<MiniGame> {
       _showResultDialog("🎉 Correct!!!", true);
     } else {
       _playSound(false);
-      _showResultDialog("❌ Wrong!", false);
+      _showResultDialog("❌ Wrong!!!", false);
     }
   }
 
